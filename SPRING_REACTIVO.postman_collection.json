@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "1e9e1828-9096-4c7e-bab4-a3a63469b5e7",
+		"name": "EVALUACION_SPRING_REACTIVO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ESTUDIANTES",
+			"item": [
+				{
+					"name": "REGISTAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE2MTIsImV4cCI6MTU4NjEzMTczMn0.wVFczGseKtF9JjJiBsRNPZLUI-WmZQ8mjo8e0MiePt02OTHihOeyCiRQkdOVVqx0kVswrbCagfTIjKW6w5lNxg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombres\": \"Hector\",\n\t\"apellidos\": \"Perez Perez\",\n\t\"dni\": \"777777\",\n\t\"edad\": 13\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MODIFICAR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE2MTIsImV4cCI6MTU4NjEzMTczMn0.wVFczGseKtF9JjJiBsRNPZLUI-WmZQ8mjo8e0MiePt02OTHihOeyCiRQkdOVVqx0kVswrbCagfTIjKW6w5lNxg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5e89182ec3243f4f558a67b8\",\n    \"nombres\": \"Juan Carlos\",\n    \"apellidos\": \"Perez Perez\",\n    \"dni\": \"12345678\",\n    \"edad\": 16.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_TODOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE2MTIsImV4cCI6MTU4NjEzMTczMn0.wVFczGseKtF9JjJiBsRNPZLUI-WmZQ8mjo8e0MiePt02OTHihOeyCiRQkdOVVqx0kVswrbCagfTIjKW6w5lNxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_POR_ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE2MTIsImV4cCI6MTU4NjEzMTczMn0.wVFczGseKtF9JjJiBsRNPZLUI-WmZQ8mjo8e0MiePt02OTHihOeyCiRQkdOVVqx0kVswrbCagfTIjKW6w5lNxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes/5e89182ec3243f4f558a67b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes",
+								"5e89182ec3243f4f558a67b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ELIMINAR",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE2MTIsImV4cCI6MTU4NjEzMTczMn0.wVFczGseKtF9JjJiBsRNPZLUI-WmZQ8mjo8e0MiePt02OTHihOeyCiRQkdOVVqx0kVswrbCagfTIjKW6w5lNxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes/5e89182ec3243f4f558a67b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes",
+								"5e89182ec3243f4f558a67b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_EDAD_DESC",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE2MTIsImV4cCI6MTU4NjEzMTczMn0.wVFczGseKtF9JjJiBsRNPZLUI-WmZQ8mjo8e0MiePt02OTHihOeyCiRQkdOVVqx0kVswrbCagfTIjKW6w5lNxg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes/orderByEdad/simple",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes",
+								"orderByEdad",
+								"simple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_EDAD_DESC_PARALELO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/estudiantes/orderByEdad/paralelo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"estudiantes",
+								"orderByEdad",
+								"paralelo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CURSOS",
+			"item": [
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Álgebra\",\n\t\"siglas\": \"ALG\",\n\t\"estado\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cursos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MODIFICAR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5e8919d4c3243f4f558a67b9\",\n    \"nombre\": \"Aritmértica\",\n    \"siglas\": \"ARIT\",\n    \"estado\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/cursos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_TODOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/cursos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_POR_ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/cursos/5e8919d4c3243f4f558a67b9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cursos",
+								"5e8919d4c3243f4f558a67b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ELIMINAR",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/cursos/5e8919d4c3243f4f558a67b9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"cursos",
+								"5e8919d4c3243f4f558a67b9"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MATRICULAS",
+			"item": [
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fecha\": \"2020-04-04T17:28:00.8756Z\",\n\t\"estudiante\": {\n\t\t\"id\": \"5e89221d5300165c39ad13cb\"\n\t},\n\t\"cursos\": [\n\t\t{\n    \t\t\"id\": \"5e8922225300165c39ad13cc\"\n\t\t},\n\t\t{\n    \t\t\"id\": \"5e8922495300165c39ad13cd\"\n\t\t}\n\t],\n\t\"estado\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/matriculas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"matriculas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MODIFICAR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5e892d06433d4e620f5acf9e\",\n    \"fecha\": \"2020-04-04T17:28:00.8756\",\n    \"estudiante\": {\n        \"id\": \"5e89221d5300165c39ad13cb\",\n        \"nombres\": null,\n        \"apellidos\": null,\n        \"dni\": null,\n        \"edad\": 0.0\n    },\n    \"cursos\": [\n        {\n            \"id\": \"5e8922225300165c39ad13cc\",\n            \"nombre\": null,\n            \"siglas\": null,\n            \"estado\": false\n        }\n    ],\n    \"estado\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/matriculas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"matriculas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_TODOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/matriculas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"matriculas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_POR_ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/matriculas/5e892d06433d4e620f5acf9e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"matriculas",
+								"5e892d06433d4e620f5acf9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ELIMINAR",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoicHJvYmFuZG8uLi4iLCJyb2xlcyI6WyJBRE1JTiIsIlVTRVIiXSwic3ViIjoia2VueW8iLCJpYXQiOjE1ODYxMzE3NTcsImV4cCI6MTU4NjEzMTg3N30.qiKdNMfvaH10Y4x8BejJLmXpTfaYJrRPa1MO0BjCX84vr_KCvazaVw8KsL5W9rLIT-HIP8V5VHr8ADELcy-_hQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/matriculas/5e892d06433d4e620f5acf9e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"matriculas",
+								"5e892d06433d4e620f5acf9e"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "USUARIOS",
+			"item": [
+				{
+					"name": "LISTAR_ROLES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/usuarios/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"usuarios",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"juan\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "kenyo",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR_USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\": \"juan\",\n\t\"clave\": \"123456\",\n\t\"estado\": true,\n\t\"roles\": [\n\t\t{\n\t\t    \"id\": \"5e8a60a769132926b16b9f95\",\n\t\t    \"nombre\": \"ADMIN\"\n\t\t},\n\t\t{\n\t\t    \"id\": \"5e8a60ba69132926b16b9f96\",\n\t\t    \"nombre\": \"USER\"\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
